@@ -1,0 +1,23 @@
+1. How to Open Your Project in Browser?
+http://localhost/registration-app/register.html
+
+
+2.Open phpMyAdmin:
+http://localhost/phpmyadmin
+
+3.Create your database manually (for example, mydatabase).Then use it in your PHP scripts like:
+$conn = new mysqli("localhost", "root", "", "mydatabase");
+
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    address TEXT NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    faculty VARCHAR(100) NOT NULL,
+    program VARCHAR(100) NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
